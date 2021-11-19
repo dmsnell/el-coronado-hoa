@@ -1,0 +1,543 @@
+<html>
+    <head>
+        <title>El Coronado Condominiums</title>
+    </head>
+    <style>
+        :root {
+            --callout-bg: rgb(163, 209, 237);
+            --definition-color: rgb(50, 103, 135);
+            --definition-link-color: rgb(135, 88, 50);
+            --list-item-spacing: 0.5em;
+            --nebulous-color: rgb(170, 184, 188);
+            --removed-color: rgb(240, 180, 180);
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        article {
+            max-width: 70vw;
+            margin: auto;
+            margin-left: 10vw;
+
+            counter-increment: section;
+        }
+
+        article h2::before {
+            content: counter(section) ".";
+            margin-right: var(--list-item-spacing);
+        }
+
+        section#preamble h2:before {
+            content: "i.";
+            margin-right: var(--list-item-spacing);
+        }
+
+        aside {
+            background-color: var(--callout-bg);
+            max-width: 40vw;
+            margin: auto;
+            padding: 1em 3em;
+        }
+
+        aside + p {
+            clear: left;
+        }
+
+        embed {
+            min-height: 600px;
+            width: 100%;
+        }
+
+        heading, hgroup {
+            margin: auto;
+            text-align: center;
+            width: 50vw;
+        }
+
+        #table-of-contents li {
+            line-height: 1;
+            margin-top: inherit;
+        }
+
+        a[href^="#dfn-"] {
+            color: var(--definition-link-color);
+            font-family: monospace;
+            text-decoration: none;
+        }
+
+        a[href^="#dfn-"]:hover {
+            text-decoration: underline;
+        }
+
+        li {
+            margin-top: 2em;
+        }
+
+        li:first-child {
+            margin-top: inherit;
+        }
+
+        article ol {
+            counter-reset: subsection;
+            list-style: none;
+        }
+
+        article ol li {
+            counter-increment: subsection;
+        }
+
+        article ol li:before {
+            content: counter(section) "." counter(subsection) ".";
+            margin-right: var(--list-item-spacing);
+        }
+
+        article ol ol {
+            counter-reset: subsubsection;
+            list-style: none;
+        }
+
+        article ol ol li {
+            counter-increment: subsubsection;
+        }
+
+        article ol ol li:before {
+            content: counter(section) "." counter(subsection) "." counter(subsubsection) ".";
+            margin-right: var(--list-item-spacing);
+        }
+
+	article ol.stipulations {
+            counter-reset: stipulations;
+        }
+
+        article ol.stipulations li {
+            counter-increment: stipulations;
+        }
+
+        article ol.stipulations li:before {
+            content: "(" counter(stipulations, lower-latin) ")";
+        }
+
+        section {
+            max-width: 70vw;
+            margin: auto;
+        }
+
+        dfn {
+            color: var(--definition-color);
+            font-weight: bold;
+        }
+
+        dfn::before {
+            content: "\"";
+        }
+
+        dfn::after {
+            content: "\"";
+        }
+
+        .deprecated {
+            background-color: var(--removed-color);
+            padding: 1em 2em;
+        }
+
+        .typo.missing {
+            color: var(--nebulous-color);
+            font-style: italic;
+        }
+    </style>
+    <body>
+        <header id="title-page">
+            <hgroup>
+                <h2>El Coronado Condominiums</h2>
+                <h3>Declaration of horizontal property regime</h3>
+                <p>and of</p>
+                <h3>covenants, conditions & restrictions of El Coronado Association</h3>
+            </hgroup>
+        </header>
+
+        <section id="table-of-contents">
+            <h2>Table of contents</h2>
+            <nav>
+                <ol>
+                    <li value="1" type="i"><a href="#preamble">Preamble</a></li>
+                    <li value="1"><a href="#definitions">Definitions</a></li>
+                    <li><a href="#submission-of-property">Submission of Property</a></li>
+                    <li><a href="#descriptions">Descriptions of Building, Units, Common Elements</a></li>
+                    <li><a href="#association">Association</a></li>
+                    <li><a href="#use-of-common-elements">Use of Common Elements</a></li>
+                    <li><a href="#managing-agent">Managing Agent</a></li>
+                    <li><a href="#parking">Parking</a></li>
+                    <li><a href="#common-expenses">Common Expenses & Member Loans</a></li>
+                    <li><a href="#mortgages">Mortgages</a></li>
+                    <li><a href="#insurance">Insurance</a></li>
+                    <li><a href="#damage">Damage & Destruction</a></li>
+                    <li><a href="#condemnation">Condemnation</a></li>
+                    <li><a href="#maintenance">Maintenance, repairs and replacements</a></li>
+                    <li><a href="#alterations">Alterations, Additions or Improvements</a></li>
+                    <li><a href="#decoration">Decorating & Architectural Control</a></li>
+                    <li><a href="#encroachments">Encroachments</a></li>
+                    <li><a href="#lease-of-apartment">Lease of Apartment</a></li>
+                    <li><a href="#restrictions">Use & Occupancy Restrictions</a></li>
+                    <li><a href="#remedies">Remedies</a></li>
+                    <li><a href="#amendment">Amendment</a></li>
+                    <li><a href="#notices">Notices</a></li>
+                    <li><a href="#severability">Severability</a></li>
+                    <li><a href="#perpetuities">Perpetuities & Restraints on Alienation</a></li>
+                    <li><a href="#rights-and-obligations">Rights & Obligations</a></li>
+                    <li value="1" type="I"><a href="#amendment-1979">Amendment to <abbr title="Covenants, conditions & restrictions">CC&Rs</abbr> (<time datetime="1979-05-11">May 11, 1979</time>)</a></li>
+                    <li type="I"><a href="#exhibit-a">Exhibit A</a></li>
+                    <li type="I"><a href="#exhibit-b">Exhibit B</a></li>
+                    <li type="I"><a href="#amendment-1987">Amendment to <abbr title="Covenants, conditions & restrictions">CC&Rs</abbr> (<time datetime="1987-08-14">August 14, 1987</time>)</a></li>
+                </ol>
+            </nav>
+        </section>
+
+        <section id="preamble">
+            <h2>Preamble</h2>
+            <hgroup>
+                <h3>Declaration of Horizontal Property Regime</h3>
+                <p>and of</p>
+                <h3>Covenants, Conditions and Restrictions</h3>
+            </hgroup>
+
+            <p><strong>This declaration</strong> is made and entered as of the date hereinafter set forth by <span class="organization">Pioneer Trust Company of Arizona</span>, an Arizona Corporation, as Trustee, hereinafter referred to as <dfn id="dfn-declarant">Declarant</dfn>.</p>
+
+            <p><strong>Whereas</strong> <a href="#dfn-declarant">Declarant</a> is the owner of that parcel of real property situated in the City of Tucson, County of Pima, State of Arizona, and described on <a href="#exhibit-a">Exhibit A</a> attached hereto and by reference made a part hereof, hereinafter sometimes called the "<a href="#dfn-parcel">Parcel</a>"; and,</p>
+
+            <p><strong>Whereas</strong>, <a href="#dfn-declarant">Declarant</a> desires to submit and subject the <a href="#dfn-parcel">Parcel</a> together with all buildings, improvements and other permanent fixtures of whatsoever kind thereon, and all rights, privileges belonging or in anywise pertaining thereto (hereinafter sometimes called the <dfn id="dfn-property">Property</dfn>) to a horizontal property regime pursuant to <cite>Section 33-531 through 33-561, Arizona Revised Statutes</cite>; and</p>
+
+            <aside>Sections 531-561 do not appear to exist within the <a href="https://www.azleg.gov/arsDetail/?title=33">Arizona Revisted Statutes, Title 33</a>.</aside>
+
+            <p><strong>Whereas</strong>, <a href="#dfn-declarant">Declarant</a> is further desirous of establishing for his own benefit and for the mutual benefit of all future owners or occupants of the <a href="#dfn-property">Property</a>, or any part thereof, certain easements and rights in, over and upon said premises and certain mutually beneficial restrictions and obligations with respect to the proper use, conduct and maintenance thereof; and</p>
+
+            <p><strong>Whereas</strong>, <a href="#dfn-declarant">Declarant</a> desires and intends that the owners, mortagees, beneficiaries and trustees under trust deeds, occupants and all other persons hereinafter acquiring any interest in said development shall at times enjoy the benefits of, and shall hold their interests subject to, the rights, easements, privileges and restrictions hereinafter set forth, all of which are declared to be in furtherance of a plan to promote and protect the development and are established for the purpose of enhancing and perfecting the value, desirability and attractiveness of the property;</p>
+
+            <p><strong>Now therefore</strong>, <a href="#dfn-declarant">Declarant</a>, as the sole owner of the real estate hereinbefore described and for the purposes above set forth, declares as follows:</p>
+        </section>
+
+        <article id="definitions">
+            <h2>Definitions</h2>
+            <p>As used herein, unless the context otherwise requires:</p>
+            <ol>
+                <li><dfn id="dfn-act">Act</dfn> means <cite>Section 33-551 through Section 33-561, Arizona Revised Statutes</cite>.</li>
+                <li><dfn id="dfn-association">Association</dfn> means <span class="organization">El Coronado Association</span>, an Arizona nonprofit corporation.</li>
+                <li><dfn id="dfn-declaration">Declaration</dfn> means this instrument by which the <a href="#dfn-property">Property</a> is submitted to a horizontal property regime, as such <a href="#dfn-declaration">Declaration</a> may from time to time be amended.</li>
+                <li><dfn id="dfn-parcel">Parcel</dfn> means the parcel or tract of real estate desribed above in this <a href="#dfn-declaration">Declaration</a>, submitted to a horizontal property regime.</li>
+                <li><dfn id="dfn-property">Property</dfn> shall have the same meaning as set forth in <cite>Section 33-551, Arizona Revised Statutes</cite>, as related to the development which is the subject matter of this <a href="#declaration">Declaration</a>, together with all furniture, furnishings, fixtures and equipment intended for the mutual use, benefit and enjoyment of the <a href="#dfn-unit">Unit</a> owners.</li>
+                <li><dfn id="dfn-unit">Unit</dfn> means a part of the <a href="#dfn-property">Property</a>, including one or more rooms situated in the building comprising a part of the <a href="#dfn-property">Property</a>, designed or intended for independent use as permitted hereunder and as set forth on the plat of survey attached hereto as <a href="#exhibit-b">Exhibit B</a>. Each Unit shall consist of the space enclosed and bounded by the horizontal and vertical planes as shown on said plat and as further described herein; provided, however, that no structural components of the building in which each Unit is located, and no pipes, wires, conduits, ducts, flues, shafts, or public utility, water or sewer lines situated within such Unit and forming part of any system serving one or more other Units or the <a href="#dfn-common-elements">Common Elements</a> shall be deemed to be a part of the Unit.</li>
+                <li><dfn id="dfn-common-elements">Common Elements</dfn> means the <q>general common elements</q>, as that term is defined in <cite>Section 33-531, Arizona Revised Statutes</cite>.</li>
+                <li><dfn id="dfn-person">Person</dfn> means a natural individual, corporation, partnership, trustee or other legal entity capable of holding title to real property.</li>
+                <li><dfn id="dfn-owner">Owner</dfn> or "Owners" means the person or persons whose estates or interests individually or collectively aggregate fee simple ownership of a <a href="#dfn-unit">Unit</a> and the person or persons who are purchasers under a valid and outstanding recorded Agreement of Sale with respect to a <a href="#dfn-unit">Unit</a>.</li>
+                <li><dfn id="dfn-majority">Majority</dfn> or "Majority of Owners" means the owners of more than 50 percent of the undivided ownership of the <a href="#dfn-common-elements">Common Elements</a> then entitled to vote. Any specified percentage of the <a href="#dfn-owner">Owners</a> means that percentage of undivided ownership of the <a href="#dfn-common-elements">Common Elements</a>. Provided, however, that until all <a href="#dfn-unit">Units</a> are sold by <a href="#dfn-declarant">Declarant</a>, the <a href="#dfn-declarant">Declarant</a> shall have the right to control the decision of the <a href="#dfn-association">Association</a> and all voting, quorum, and other rights shall be vested solely in <a href="#dfn-declarant">Declarant</a>.</li>
+                <li><dfn id="dfn-plat">Plat</dfn> means the plats of survey of the <a href="#dfn-property">Property</a> and of all <a href="#dfn-unit">Units</a> submitted to a horizontal property regime, as recorded in <cite><a href="https://gis.pima.gov/maps/subdiv/select.cfm?bkpg=30095">Book 30 of Maps in page 95 thereof, Pima County, Arizona</a></cite>, a copy of said Plat being attached hereto as <a href="#exhibit-b">Exhibit B</a>.</li>
+                <li><dfn id="dfn-record">Record</dfn> or "Recording" refers to record or recording in the office of the County Recorder of Pima County, Arizona.</li>
+                <li><dfn id="dfn-building">Building</dfn> means the buildings located on the <a href="#dfn-parcel">Parcel</a> and forming part of the <a href="#dfn-property">Property</a> as shown on the plat.</li>
+                <li><dfn id="dfn-occupant">Occupant</dfn> means a person or persons, other than an <a href="#dfn-owner">Owner</a>, in possession of a <a href="#dfn-unit">Unit</a>.</li>
+            </ol>
+        </article>
+
+        <article id="submission-of-property">
+            <h2>Submission of Property</h2>
+            <p><a href="#dfn-declarant">Declarant</a> hereby submits and subjects the <a href="#dfn-property">Property</a> to a horizontal property regime pursuant to <cite>Sections 33-551 through 33-561, Arizona Revised Statutes</cite>, and does hereby declare that all of the <a href="#dfn-unit">Units</a> shall be owned, leased, sold, conveyed and encumbered subject to the terms, conditions and other provisions of this <a href="#dfn-declaration">Declaration</a>.</p>
+        </article>
+
+        <article id="descriptions">
+            <h2>Description of the Building, the Units and the Common Elements</h2>
+            <p>The entire horizontal property regime shall be known as <dfn id="dfn-elcoronado">El Coronado</dfn> and shall be constituted of 12 units as described in the <a href="#dfn-plat">Plat</a> together with the percentage interest in the <a href="#dfn-common-elements">Common Elements</a> which is appurtenant to each unit.</p>
+
+            <ol>
+                <li id="section-3.1">A description of the cubic content space of the <a href="#dfn-building">Building</a> with reference to its location on the <a href="#dfn-parcel">Parcel</a> is set forth in the <a href="#dfn-plat">Plat</a>. The upper boundary shall be the plane of the top elevation of the <a href="#dfn-building">Building</a>, as shown on the <a href="#dfn-plat">Plat</a>, and the lower boundary shall be the plane of the base elevation of the <a href="#dfn-building">Building</a> as shown on the <a href="#dfn-plat">Plat</a>. The vertical boundaries shall be the exterior of the outside walls except where there are patios for the exclusive use of a <a href="#dfn-unit">Unit</a> and which extend beyond the exterior of the outside walls, the vertical boundaries of which shall be the plane of the outer edge of such patios as shown on the <a href="#dfn-plat">Plat</a>.</li>
+                <li id="section-3.2">The cubic content space of each <a href="#dfn-unit">Unit</a> shall consist of, and be measured by, the entire space between the unit horizontal and vertical boundaries shown on the <a href="#dfn-plat">Plat</a>. Each unit's horizontal boundaries shall be the underside of the finished but undecorated ceiling and the top of the finished by undecorated floor. Each unit's outside, finished, but undecorated walls and the plane of the inside edges of such unit's appurtenant patio, as shown on the plat.</li>
+                <li>A description of the <a href="#dfn-common-elements">Common Elements</a> is the description referred to above in <a href="#section-3.1">subparagraph 3.1</a>, plus the <a href="#dfn-parcel">Parcel</a>, less the description referred to above in <a href="#section-3.2">subparagraph 3.2</a>. A description of the other <a href="#dfn-common-elements">Common Elements</a> is as set forth in <a href="#dfn-common-elements">subparagraph 1.7</a> of this <a href="#dfn-declaration">Declaration</a>.</li>
+                <li>The percentage (fractionally expressed) interest which each <a href="#dfn-unit">Unit</a> bears to the entire horizontal property regime, which percentage interest shall constitute the percentage interest in the <a href="#dfn-common-elements">Common Elements</a> which is appurtenant to each such <a href="#dfn-unit">Unit</a>, is one twelfth (1/12).</li>
+                <li>The patio areas as designated on the recorded plat, are to be restricted <a href="#dfn-common-elements">Common Elements</a> for the exclusive use of the attached unit.</li>
+            </ol>
+        </article>
+
+        <article id="association">
+            <h2>Association</h2>
+            <p>The <a href="#dfn-association">Association</a> has been, or will be, formed so as to constitute the <q>council of co'owners</q>, as that term is defined in <cite>Section 33-551, Arizona Revised Statutes</cite>, and to serve as the governing body for all of the <a href="#dfn-owner">Owners</a> for the maintenance, repair, replacement, administration and operation of the <a href="#dfn-property">Property</a>, the assessment of expenses, payment of losses, disposition of hazard insurance proceeds, and other matters as provided in the <a href="#dfn-act">Act</a> and in the <a href="#dfn-declaration">Declaration</a> and in the bylaws of the <a href="#dfn-association">Association</a> (hereinafter called the <dfn id="dfn-bylaws">Bylaws</dfn>).</p>
+
+            <p>The <a href="#dfn-association">Association</a> shall not be deemed to be conducting a business of any kind, and all funds received by the <a href="#dfn-association">Association</a> shall be held and applied by it for the <a href="#dfn-owner">Owners</a> in accordance with the provisions of the <a href="#dfn-declaration">Declaration</a>  and they <a href="#dfn-bylaws">Bylaws</a>.</p>
+
+            <p>Each <a href="#dfn-owner">Owner</a> shall be a member of the <a href="#dfn-association">Association</a> so long as he shall be an <a href="#dfn-owner">Owner</a> and such membership shall automatically terminate when he ceases to be an <a href="#dfn-owner">Owner</a> and upon the transfer of his ownership interest <span class="typo missing">to</span> the new <a href="#dfn-owner">Owner</a> succeeding to such ownership interest shall likewise succeed to such membership in the <a href="#dfn-association">Association</a>.</p>
+
+            <aside>There is a missing "to" in this paragraph and the wording seems off, such as it was improperly written.</aside>
+
+            <ol>
+                <li><strong>Association Board of Directors</strong>. Until all units have been sold by <a href="#dfn-declarant">Declarant</a>, unless <a href="#dfn-declarant">Declarant</a> sooner terminates such control, only <a href="#dfn-declarant">Declarant</a> shall hold a voting membership in the <a href="#dfn-association">Association</a>, and all members of the Board of Directors of the <a href="#dfn-association">Association</a> (herein sometimes <span class="typo">refer<ins>r</ins><del>e</del>d</span> to as the <dfn id="dfn-board">Board</dfn>) shall be designated by <a href="#dfn-declarant">Declarant</a>. Upon termination of such control, <a href="#dfn-declarant">Declarant</a> shall name from among the owners, the initial Owner-Board of Directors to serve until the next annual election of Directors. Except for members designated by <a href="#dfn-declarant">Declarant</a>, each director shall be an <a href="#dfn-owner">Owner</a> or the spouse of an <a href="#dfn-owner">Owner</a> (or if an <a href="#dfn-owner">Owner</a> is a corporation, partnership or trust, a director may be an officer, partner or beneficiary of such <a href="#dfn-owner">Owner</a>). If a director shall cease to meet such qualifications during his term, he will thereupon cease to be a director and his place on the <a href="#dfn-board">Board</a> shall be deemed vacant.</li>
+
+                <li><strong>Board's determination binding</strong>. In the event of any dispute or disagreement between any <a href="#dfn-owner">Owners</a> relating to the <a href="#dfn-property">Property</a>, or any question of interpretation or application of the provisions of the <a href="#dfn-declaration">Declaration</a> or <a href="#dfn-bylaws">Bylaws</a>, the determination thereof by the <a href="#dfn-boar">Board</a> shall be final and binding on each and all of such <a href="#dfn-owner">Owners</a>.</li>
+
+                <li><strong>Indemnification</strong>. Every director and officer of the <a href="#dfn-association">Association</a>, as the case may be, against all expenses and liabilities, including attorney's fees, reasonably incurred by or imposed upon him in connection with any proceeding to which he may be a party, or in which he may become involved, by reason of his being or having been a director or officer of the <a href="#dfn-association">Association</a>, or any settlement thereof, whether or not he is a director or officer at the time such expenses are incurred, provided that the <a href="#dfn-board">Board of Directors</a> of the <a href="#dfn-association">Association</a> shall determine, in good faith, that such officer or director did not act, fail to act, or refuse to act wilfully, or with gross negligence, or fraudulent or criminal intent in the performance of his duties. The foregoing rights of indemnification shall be in addition to and not exclusive of all other rights to which such directors or officers may be entitled.</li>
+
+                <li><strong>Easements</strong>. The <a href="#dfn-association">Association</a> is authorized and empowered to grant such licenses, easements and rights of way for sewer lines, water lines, underground conduits, storm drains and other public utility purposes as may be necessary and appropriate for the orderly maintenance, preservation and enjoyment of the <a href="#dfn-common-elements">Common Elements</a> or for the preservation of the health, safety, convenience and welfare of the <a href="#dfn-owner">Owners</a>, provided that any damage to a <a href="#dfn-unit">Unit</a> resulting from such grant shall be repaired by the <a href="#dfn-association">Association</a> at its expense.</li>
+            </ol>
+        </article>
+
+        <article id="use-of-common-elements">
+            <h2>Use of Common Elements</h2>
+            <p>Each <a href="#dfn-owner">Owner</a> shall have the right to use the <a href="#dfn-common-elements">Common Elements</a> in common with all other <a href="#dfn-owner">Owners</a> as may be required for the purposes of access and ingress and egress to, and use and occupancy and enjoyment of, the respective <a href="#dfn-unit">Unit</a> owned by such <a href="#dfn-owner">Owner</a>. Such right to use the <a href="#dfn-common-elements">Common Elements</a> shall extend to each <a href="#dfn-owner">Owner</a> and the agents, servants, tenants, and invitees of each <a href="#dfn-owner">Owner</a>. Such rights to use and possess the <a href="#dfn-common-elements">Common Elements</a> shall be subject to and governed by the provisions of this <a href="#dfn-declaration">Declaration</a> and the <a href="#dfn-bylaws">Bylaws</a>, Rules and Regulations of the <a href="#dfn-association">Association</a>. The <a href="#dfn-association">Association</a> shall have the authority to lease or to grant concessions with respect to parts of the <a href="#dfn-common-elements">Common Elements</a>, subject to the provisions of the <a href="#dfn-declaration">Declaration</a> and <a href="#dfn-bylaws">Bylaws</a>.</p>
+        </article>
+
+        <article id="managing-agent">
+            <h2>Managing Agent</h2>
+            <p>All powers, duties and rights of the <a href="#dfn-association">Association</a> or its <a href="#dfn-boar">Board</a> as provided by law and herein may be delegated to a managing agent, under a management agreement.</p>
+        </article>
+
+        <article id="parking">
+            <h2>Parking</h2>
+            <p>The <a href="#dfn-boar">Board</a> shall have full authority to operate, manage and use for and on behalf of all <a href="#dfn-owner">Owners</a> the parking situated on the <a href="#dfn-parcel">Parcel</a>. Each owner shall have the right to exclusive use of one covered parking space on the <a href="#dfn-parcel">Parcel</a> for each <a href="#dfn-unit">Unit</a> owned except <span class="unit unit-547">Unit 547</span> which will have exclusive use of the parking space adjacent and west of this <a href="#dfn-unit">Unit</a>. Such space shall be assigned by the <a href="#dfn-boar">Board</a>, subject to its rules and regulations. Any additional parking must be negotiated by an owner and the board.</p>
+        </article>
+
+        <article id="common-expenses">
+            <h2>Common expenses and member loans</h2>
+            <ol>
+                <li id="section-8.1">Each <a href="#dfn-owner">Owner</a>	shall pay his proportionate share of the expenses of the administration and operation of the <a href="#dfn-common-elements">Common Elements</a> and of any other expense incurrect in confromance with the <a href="#dfn-declaration">Declaration</a> and <a href="#dfn-bylaws">Bylaws</a> (which expenses are herein sometimes referred to as <dfn id="dfn-common-expenses">common expenses</dfn>), including specifically, but not by way of limitation, the maintenance and repair thereof and any and all replacements and additions thereto. Such proportionate share of the common expenses for each <a href="#dfn-owner">Owner</a> shall be in the same ratio as his percentage of interest in the <a href="#dfn-common-elements">Common Elements</a>. There will be two exceptions to the one-twelfth (1/12) allocation of common area expenses. <span class="unit unit-529">Unit Number 529</span>, the one-bedroom dwelling, will be assessed for common area expenses at sixty-five percent (65%) of the monthly fee and <span class="unit unit-547">Unit Number 547</span>, the detached three-bedroom dwelling, will be assessed at one hundred and thirty-five percent (135%) of the monthly fee. Payment of the common expenses, including any prepayment thereof required by contract for sale of a <a href="#dfn-unit">Unit</a>, shall be in such amounts and at such times as determined in the manner provided by the <a href="#dfn-bylaws">Bylaws</a>. If any <a href="#dfn-owner">Owner</a> shall fail or refuse to make any such payment of common expenses when due, the amount thereof shall constitute a lien on such <a href="#dfn-owner">Owner's</a> <a href="#dfn-unit">Unit</a> and appurtenant share of the <a href="#dfn-common-elements">Common Elements</a>, provided, however, that such lien shall be subordinate to the lien of a prior recorded first mortgage on, or the right, title and interest of the trustee and beneficiary under a first deed of trust in and to, the applicable <a href="#dfn-unit">Unit</a>, except for the amount of the proprotionate share of common expenses, which become due and payable from and after the date on which the <a href="#dfn-owner">Owner</a> or holder of the mortgage, or the trustee or beneficiary under the trust deed, either takes possession of the applicable <a href="#dfn-unit">Unit</a>, accepts a conveyance of any interest therein (other than as security) or files suit to foreclose its lien, or records a notice of trustee's sale, or causes a receiver to be appointed for the <a href="#dfn-unit">Unit</a>. The lien provided for in this paragraph may be foreclosed by the <a href="#dfn-association">Association</a></li>
+
+                <li id="loans-to-association">Loans to the <a href="#dfn-association">Association</a>
+                    <details>
+                        <summary>Removed in <a href="#amendment-1987">second amendment: August 14, 1987</a></summary>
+                        <div class="deprecated">
+                            <p>By approval of a majority of the <a href="#dfn-board">Board</a>, the <a href="#dfn-association">Association</a> may require <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owners</a> to loan to the <a href="#dfn-association">Association</a> such amounts as the <a href="#dfn-board">Board</a> shall determine necessary for the primary purpose of providing security for planned or contingent future costs and expenses of the <a href="#dfn-association">Association</a>. All such loans shall be subject to the following terms and limitations:</p>
+
+                            <ol class="stipulations">
+                                <li>Unless the <a href="#dfn-board">Board</a> shall determine that a different method of appointment would be more equitable, all loan requirements shall be levied by apportionment among the <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owners</a> on the basis of their respective percentages in the <a href="#dfn-common-elements">Common Elements</a>.</li>
+
+                                <li>Loan proceeds shall be paid by <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owners</a> to the <a href="#dfn-association">Association</a> at such time or times and in such manner as the <a href="#dfn-board">Board</a> shall determine (for example, by way of monthly installments).</li>
+
+                                <li>All such loans shall be repayable by the <a href="#dfn-association">Association</a> on or before such maturity date or dates as the <a href="#dfn-board">Board</a> shall set, provided that in no case shall any maturity date be set more than ten (10) years after the close of the calendar year in which the loan is made.</li>
+
+                                <li>Such loans shall be made, as determined by the <a href="#dfn-board">Board</a>, wich or without provision for interest, provided that in each case interest shall accrue from the maturity date until paid at the rate of six percent (6%) per annum or such higher rate set by the <a href="#dfn-board">Board</a>.</li>
+
+                                <li>The loan indebtedness outstanding as to <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owners</a> generally, or any particular <a href="#dfn-owner">Owner</a> may, upon approval of the <a href="#dfn-board">Board</a>, be discharged, wholly or in part, by offsetting carrying charges or other assessments, regular or special, payable to the <a href="#dfn-association">Association</a> against the same, provided that in no event shall any carrying charge or assessment required to be paid by any <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owner</a> be offset against the loan indebtedness outstanding to any other <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owner</a>. Such right of offset shall exist throughout the term of all loans and shall be prior and superior to any and all other rights, interests or claims in or with respect to the same and shall, with respect to each <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owner</a>, be exercised against the loan indebtedness to him in the order of maturity.</li>
+
+                                 <li>The lien rights contemplated by <a href="#section-8.1">Subparagraph 8.1</a> above shall apply with respect to any and all loans required to be made as provided for herein.</li>
+
+                                 <li>In no event shall any <a href="#dfn-unit">Unit</a> <a href="#dfn-owner">Owner's</a> rights in respect to any loan indebtedness to him be subject to assignment, transfer for encumbrance (voluntarily, involuntarily or by operation of law) separate from title to his <a href="#dfn-unit">Unit</a>. The ownership of any and all such rights shall in all cases run with the ownership of <a href="#dfn-unit">Units</a> and each transfer of title of any <a href="#dfn-unit">Unit</a> (voluntarily, involuntarily or by operation of law) shall, in addition, be effective as a transferee, whether or not specifically assigned.</li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </article>
+
+        <article id="mortgages">
+            <h2>Mortgages</h2>
+            <p>Each owner shall have the right, subject to the provisions hereof, to make separate mortgages and to enter into trust deeds for his respective <a href="#dfn-unit">Unit</a>. No <a href="#dfn-owner">Owner</a> shall have the right or authority to make or create or cause to be made or created any mortgage, or other lien or security interest, on or affecting the <a href="#dfn-property">Property</a> or any part thereof, except only to the extent of his <a href="#dfn-unit">Unit</a> and its appurtenant interest in the <a href="#dfn-common-elements">Common Elements</a>.</p>
+        </article>
+
+        <article id="insurance">
+            <h2>Insurance</h2>
+            <p>The <a href="#dfn-board">Board</a> shall have the authority to and shall obtain insurance for the <a href="#dfn-property">Property</a>, exclusive of the additions, improvements and decorating made in the <a href="#dfn-unit">Units</a> by the <a href="#dfn-owner">Owners</a>, against loss or damage by fire and such other hazards as the <a href="#dfn-board">Board</a> may deem desirable in an amount sufficient to meet the co-insurance requirements of the poilicy or policies, but not less than 90% of the full insurable value of the <a href="#dfn-common-elements">Common Elements</a> and the <a href="#dfn-unit">Units</a> as determined at least once each year by the <a href="#dfn-board">Board</a>. Such insurance coverage shall be written in the name of, and the proceeds thereof shall be payable to, the <a href="#dfn-association">Association</a>, or the <a href="#dfn-board">Board</a>, as the trustee for each of the <a href="#dfn-owner">Owners</a> in their respective percentage of ownership interest in the <a href="#dfn-common-elements">Common Elements</a>, and to the holders of mortgages or the beneficiaries of deeds of trust on the <a href="#dfn-property">Property</a> and/or the individual <a href="#dfn-unit">Units</a>. The policy of insurance should also contain, if possible, a waiver of subrogation rights by the insurer against individual <a href="#dfn-owner">Owners</a>. Premiums for such insurance shall be common expenses. The <a href="#dfn-board">Board</a> shall also have the authority to and shall obtain comprehensive public liability insurance in such limits as it shall deem desirable and workmen's compensation insurance and other liability insurance as it may deem desirable, insuring each <a href="#dfn-owner">Owner</a>, the <a href="#dfn-association">Association</a>, its officers and the <a href="#dfn-board">Board</a>, <a href="#dfn-declarant">Declarant</a> and the manager or manging agent of the <a href="#dfn-property">Property</a> from liability in connection with the <a href="#dfn-common-elements">Common Elements</a> and the Premiums for such insurance shall be common expenses. Each <a href="#dfn-owner">Owner</a> shall be responsible for his own insurance on the contents of his own <a href="#dfn-unit">Unit</a>, and his additions and improvements thereto and decorating and furnishings and personal property therein and his personal property stored elsewhere on the property and his personal liability to the extent not covered by the liability insurance for all of the <a href="#dfn-owner">Owners</a> obtained as part of the common expenses as above provided.</p>
+        </article>
+
+        <article id="damage">
+            <h2>Damage and destruction</h2>
+            <p>In the event the <a href="#dfn-property">Property</a> is damaged or destroyed by fire or other hazards, and</p>
+
+            <ol>
+                <li>If such damage or destruction extends to fewer than one-half of the <a href="#dfn-unit">Units</a>, or extends to any of the <a href="#dfn-common-elements">Common Elements</a>, and the insurance proceeds derived from such loss amount to $100,000 or less, then the <a href="#dfn-board">Board</a> shall contract with a licensed contractor or contractors to rebuild or repair such damaged or destroyed portions of the <a href="#dfn-property">Property</a> in conformance with the original plans and specifications, or, if the <a href="#dfn-board">Board</a> determines that adherance to such original plans and specifications is impractible or is not in conformance with applicable laws, ordinances, building codes, or other governmental rules or regulations then in effect, then such repairs or rebuilding shall be of a kind and quality substantially equivalent to the original construction of such improvements.</li>
+
+                <li id="section-11.2">If such damage or destruction extends to fewer than one-half of the <a href="#dfn-unit">Units</a>, or extends to any of the <a href="#dfn-common-elements">Common Elements</a>, and the insurance proceeds derived from such loss amount to more than $100,000, all of such insurance proceeds shall be paid directly to a bank located in Pima County, Arizona, whose accounts are insured by the Federal Deposit Insurance Corporation, or its successor agency, as designated by the <a href="#dfn-board">Board</a>, as trustee (hereinafter called the <dfn id="dfn-insurance-trustee">Insurance Trustee</dfn>) for all <a href="#dfn-owner">Owners</a> and the owners and holders of first mortgages and the trustees and beneficiaries under first trust deeds with respect to the <a href="#dfn-unit">Units</a>, as their interests may then appear. Such proceeds shall be received, held and administered by the <a href="#dfn-insurance-trustee">Insurance Trustee</a> subject to the provisions of an insurance trust agreement which shall be consistent with the provisions of this <a href="#dfn-declaration">Declaration</a> and which shall be entered into between the <a href="#dfn-insurance-trustee">Insurance Trustee</a> and the <a href="#dfn-board">Board</a>. Disbursement of such funds shall be made only upon the signatures of two members of the <a href="#dfn-board">Board</a> and upon terms and conditions provided in this <a href="#section-11.2">subparagraph 11.2</a>. As soon as practicable after notification of the receipt of insurance proceeds by the <a href="#dfn-insurance-trustee">Insurance Trustee</a>, the <a href="#dfn-board">Board</a> shall enter into a contract with a licensed contractor or contractors for the repair or rebuilding of all of the damaged or destroyed <a href="#dfn-unit">Units</a> and <a href="#dfn-common-elements">Common Elements</a> according to the original plans and specifications of said improvements, or, if the <a href="#dfn-board">Board</a> determines that adherance to such original plans and specifications is impracticable or not in conformity with applicable statutes, ordinances, building codes, or other governmental rules and regulations then in effect, then of a quality and kind substantially equivalent to the original construction of such improvements. The contract with such licensed contractor or contractors of a specified sum for performance and execution of the work therein described, and shall have provisions for periodic disbursement of funds by the <a href="#dfn-insurance-trustee">Insurance Trustee</a>, which shall be consistent with procedures then followed by prudent lending institutions doing business in Pima County, Arizona. Such periodic disbursements of funds shall be for specific dollar amounts and shall not be paid until the contractor who is engaged by the <a href="#dfn-board">Board</a> shall furnish to the <a href="#dfn-board">Board</a> before the commencement of construction a full performance and lien payment bond written by a good and responsible corporate surety. Disbursements to the contractor shall be made subject to the prior presentation of an architect's certificate containing such provisions as may be appropriate in the circumstances and deemed suitable by the <a href="#dfn-board">Board</a>. The <a href="#dfn-board">Board</a> may employ a licensed architect to supervise the repair and rebuilding to insure that all work, services and supplies are in conformity with the requirements of the construction contract.</li>
+
+                <li id="section-11.3">If said damage or destruction extends to fewer than one-half of the <a href="#dfn-unit">Units</a>, or if said damage or destruction extends to any of the <a href="#dfn-common-elements">Common Elements</a>, and if the insurance proceeds are insufficient to pay all costs of repair and rebuilding, the <a href="#dfn-board">Board</a> shall levy a special assessment to make up any deficiency, which assessment shall be levied only against the <a href="#dfn-owner">Owners</a> of the damaged or destroyed <a href="#dfn-unit">Units</a>, except that the special assessment shall be levied against all <a href="#dfn-owner">Owners</a> to the extent necessary to make up any deficiency for repair or rebuilding of the <a href="#dfn-common-elements">Common Elements</a>. If the insurance proceeds exceed the costs of repair and reconstruction, then following completion of such repair and rebuilding, the excess shall be paid over to the <a href="#dfn-owner">Owners</a> and the holders of first mortgages or the trustees under first trust deeds as their respective interests may appear. Subject to the terms and conditions hereof, the assessment shall be levied against and all payments made to the <a href="#dfn-owner">Owners</a> in the same proportion as their percentage interests in the <a href="#dfn-common-elements">Common Elements</a>. The special assessment provided for herein shall be secured by the lien provided for in <a href="#common-expenses">paragraph 8</a> of this <a href="#dfn-declaration">Declaration</a>.</li>
+
+                <li id="section-11.4">In the event that more than one-half of the <a href="#dfn-unit">Units</a> are destroyed, such insurance proceeds shall be paid directly to the <a href="#dfn-insurance-trustee">Insurance Trustee</a>, upon the same terms and conditions as specified in <a href="#section-11.2">subparagraph 11.2</a>, to be held in trust for the benefit of all <a href="#dfn-owner">Owners</a> and the holders of first mortgages and the trustees and beneficiaries under first trust deeds with respect to the <a href="#dfn-unit">Units</a>, as their respective interests shall then appear. Concurrently with the payment of any such insurance proceeds to the <a href="#dfn-insurance-trustee">Insurance Trustee</a>, the <a href="#dfn-insurance-trustee">Insurance Trustee</a>, any holder of a first mortgage, any trustee or beneficiary under a first trust deed, or the <a href="#dfn-board">Board</a>, shall record an affidavit which shall set forth the following:
+                    <ol>
+                        <li>A statement that the destruction has occurred and the date thereof;</li>
+                        <li>An identification of the <a href="#dfn-property">Property</a> by legal description or by reference to the plat;</li>
+
+                        <li>A certification that the insurance proceeds have been paid to the <a href="#dfn-insurance-trustee">Insurance Trustee</a> in accordance with this <a href="#dfn-declaration">Declaration</a>; and</li>
+
+                        <li>A certification to the effect that a copy of such affidavit has been mailed to each of the <a href="#dfn-owner">Owners</a>.
+
+                        <p>At any time within 60 days after the recordation of such affidavit, a special meeting of the members of the <a href="#dfn-association">Association</a> shall be convened for the purpose of resolving the question of whether or not the <a href="#dfn-property">Property</a> shall be reconstructed or repaired and for the resolution of a corollary business which may arise at such meeting. Upon an affirmative decision to rebuild or reconstruct by a <a href="#dfn-majority">Majority</a> of the <a href="#dfn-owner">Owners</a>, the <a href="#dfn-board">Board</a>, as soon as practicable, shall enter into a contract for a specific dollar amount with a licensed contractor or contractors and such repair or reconstruction shall be accomplished pursuant to the terms of an in the same manner as provided above, in <a href="#section-11.2">subparagraph 11.2</a>.</p>
+
+                        <p>Upon the execution of such contract, an executed copy or a memorandum thereof, shall be recorded within 60 days immediately following the date of such execution subject to extensions of time for such recording as may be granted by order of the Superior Court of the State of Arizona upon applications filed or made to such court for such extensions by the <a href="#dfn-board">Board</a> as t, in its sole discretion, may deem appropriate or necessary. If such contract or a memorandum thereof is recorded within such specified time, the <a href="#dfn-board">Board</a> shall levy a special assessment to make up such deficiency, if any, as may exist between the total of available insurance proceeds and the contract price for such repair or reconstruction. All such insurance proceeds, including any portion thereof subject to the liens of mortgages or to trust deeds shall be used for such repair or reconstruction. Such special assessments shall be levied against all <a href="#dfn-owner">Owners</a> in the same manner as the special assessment provided for in <a href="#section-11.3">subparagraph 11.3</a>, and such special assessment shall be levied in the same proportion as each <a href="#dfn-owner">Owner's</a> percentage interest in the <a href="#dfn-common-elements">Common Elements</a>. If the amount received by the <a href="#dfn-board">Board</a> or <a href="#dfn-insurance-trustee">Insurance Trustee</a> on account of such insurance proceeds and such special assessments, or either thereof, should exceed the cost of repair and reconstruction, then following the completion of such repair and reconstruction, the excess shall be paid over to the respective <a href="#dfn-owner">Owners</a> and to the holders of first mortgage liens and the trustees under first trust deeds, as their respective interests appaear, in the same proportion as the <a href="#dfn-owner">Owners'</a> respective undivided percentage interest in the <a href="#dfn-common-elements">Common Elements</a>. If a majority of the <a href="#dfn-owner">Owners</a> determine, at the special meeting hereinabove provided for in in this subparagraph, not to repair or reconstruct or if a copy or memorandum of such construction contract is not recorded within such specified time, as the same may have been so extended, the <a href="#dfn-insurance-trustee">Insurance Trustee</a> shall divide the insurance proceeds in as many shares as there are <a href="#dfn-unit">Units</a>, said shares to be in the same proportion as the <a href="#dfn-owner">Owners'</a> respective undivided percentage interests in the <a href="#dfn-common-elements">Common Elements</a>. The <a href="#dfn-insurance-trustee">Insurance Trustee</a> shall first make application of each <a href="#dfn-owner">Owner's</a> share of the Insurance proceeds to the payment and satisfaction of each mortgage, trust deed or other encumbrance or lien of record with respect to such <a href="#dfn-unit">Unit</a>. If the <a href="#dfn-insurance-trustee">Insurance Trustee</a> does not have adequate funds to pay and satisfy each mortgage, trust deed or other encumbrance or lien of record with respect to such <a href="#dfn-unit">Unit</a>, the deficiency shall be paid by the applicable <a href="#dfn-owner">Owner</a> but only in an amount that will be equal to the difference between the insurance proceeds payable with resepect to his <a href="#dfn-unit">Unit</a> and the amount secured by the applicable mortgage, trust deed or other encumbrance or lien. If any owner shall fail to pay such deficiency it may be advanced by the <a href="#dfn-association">Association</a> (acting by and through the <a href="#dfn-board">Board</a>) in which case such advance, plus interest thereon at the highest legal rate then payable in the State of Arizona by individual borrowers who are natural persons, shall be due and payable by such <a href="#dfn-owner">Owner</a> to the <a href="#dfn-association">Association</a> upon demand, and payment thereof shall be secured by the lien provided for in <a href="#common-expenses">paragraph 8</a> of this <a href="#dfn-declaration">Declaration</a>. After all of the mortgages, trust deeds, or other liens or encumbrances shall have been fully satistfied and released of record or deeds of reconveyance executed and recorded, the <a href="#dfn-board">Board</a> shall forthwith execute, acknowledge and record, as attorney in fact for all <a href="#dfn-owner">Owners</a>, a declaration withdrawing the <a href="#dfn-property">Property</a> from a horizontal property regime and upon removal of the <a href="#dfn-property">Property</a> from a horizontal property regime, each <a href="#dfn-owner">Owner's</a> share, or the remainder thereof, of such insurance proceeds shall be distributed to him.</p> 
+                        </li>
+
+                        <li>By acceptance of deeds for <a href="#dfn-unit">Units</a> from <a href="#dfn-declarant">Declarant</a> or from subsequent owners of <a href="#dfn-unit">Units</a>, or by signing of contracts or agreements for purchase, or by succeeding in any other manner to the ownership of a <a href="#dfn-unit">Unit</a>, each <a href="#dfn-owner">Owner</a> does thereby appoint, make and constitute each member of the <a href="#dfn-board">Board</a>, from time to time in office, as attorney-in-fact for such <a href="#dfn-owner">Owner</a> with full power and authority to remove the <a href="#dfn-property">Property</a> from a horizontal property regime under the circumstances hereinabove set forth in <a href="#section-11.4">subparagraph 11.4</a>. Such appointment and agency shall be irrevocable.</li>
+                    </ol>
+                </li>
+            </ol>
+        </article>
+
+        <article id="condemnation">
+            <h2>Condemnation</h2>
+            <ol>
+                <li id="section-12.1">If a portion of the <a href="#dfn-property">Property</a> should be taken by exercise of the power of emminent domain, or should be transferred and conveyed to a condemning authority in anticipation of such exercise, the entire award made as compensation for such taking, including but without limitation, any amount awarded as severance damages, or the entire amount received and paid in anticipation of such taking, after deducting therefrom, in each case, reasonable and necessary costs and expenses, including, but without limitation, attorneys' fees, appraisers' fees and court costs (which net amount is hereinarfter in this Section 12 referred to as the <dfn id="dfn-awar">Award</dfn>) shall be paid to the <a href="#dfn-association">Association</a>, as trustee for all <a href="#dfn-owner">Owners</a> and the <a href="#dfn-owner">Owners</a> and holders of first mortgages and deeds of trust then encumbering the <a href="#dfn-unit">Units</a>. If the portion of the <a href="#dfn-property">Property</a> taken or conveyed shall not be comprised of, or include, all or any part of a <a href="#dfn-unit">Unit</a> or if a majority of <a href="#dfn-owner">Owners</a> elect to restore or replace a <a href="#dfn-unit">Unit</a> under <a href="#section-12.2">Subsection 12.2</a> below, the <a href="#dfn-association">Association</a> shall, as soon as practicable, cause the <a href="#dfn-award">Award</a> to be utilized for the purpose of repairing, replacing and restoring the affected area, including, if the <a href="#dfn-association">Association</a> deems it necessary or desirable, the replacement of any <a href="#dfn-common-elements">Common Element</a> improvements so taken or conveyed.</li>
+
+                <li id="section-12.2">Except as hereinafter provided in this Section 12, if the portion of the <a href="#dfn-property">Property</a> taken or conveyed is comprised of, or includes, all or any part of a <a href="#dfn-unit">Unit</a> the <a href="#dfn-association">Association</a> shall call a special meeting of the members of the <a href="#dfn-association">Association</a> to convene within 30 days after its receipt of the <a href="#dfn-award">Award</a>, to determine whether and, if so, in what manner such <a href="#dfn-unit">Unit</a> shall be restored, reconstituted or replaced. If a majority of the votes entitled to be cast by the <a href="#dfn-association">Association</a> members determine, at such special meeting, vote not to restore, reconstitute or replace such <a href="#dfn-unit">Unit</a> and related improvements, the <a href="#dfn-association">Association</a> shall distribute the portion of the <a href="#dfn-award">Award</a> relating to such <a href="#dfn-unit">Unit</a> to first the holder of any mortgage or deed of trust upon such <a href="#dfn-unit">Unit</a> and the remainder to the <a href="#dfn-owner">Owner</a> thereof. At such time as such award has been so distributed, any such <a href="#dfn-owner">Owner</a> who has lost his <a href="#dfn-unit">Unit</a> by such taking or conveyance shall no longer possess any interest in the Project and the interest of the remaining <a href="#dfn-owner">Owners</a> in the <a href="#dfn-common-elements">Common Elements</a> shall automatically be adjusted accordingly. Any remaining award shall then be subject to <a href="#section-12.1">Subsection 12.1</a> above. Any remaining portion of the <a href="#dfn-award">Award</a> not used pursuant to <a href="#section-12.1">Subsection 12.1</a> above shall be divided into as many shares as there are remaining <a href="#dfn-unit">Units</a>, such shares to be in the same proportion as the <a href="#dfn-owner">Owners'</a> respective undivided percentage interest in the <a href="#dfn-common-elements">Common Elements</a> after such taking or conveyance, and such shares shall be distributed to the <a href="#dfn-owner">Owners</a> and the holders of any mortgage or deed of trust on the applicable <a href="#dfn-unit">Unit</a>, as their interests appear.</li>
+
+                <li>If the cost of any repair and restoration shall exceed the amount of the <a href="#dfn-award">Award</a>, a special assessment shall be levied against the remaining <a href="#dfn-owner">Owners</a> to the extent necessary to make up such deficiency. If relating to the <a href="#dfn-common-elements">Common Elements</a>, such assessment shall be levied against the <a href="#dfn-owner">Owners</a> in the same proportion as their percentage interests in the <a href="#dfn-common-elements">Common Elements</a> after such taking or conveyance. If, relating to a <a href="#dfn-unit">Unit</a>, such assessment shall be levied against the <a href="#dfn-owner">Owner</a> of such <a href="#dfn-unit">Unit</a>. The special assessment provided for herein shall be secured by the lien provided for in <a href="#common-expenses">Paragraph 8</a> of this <a href="#dfn-declaration">Declaration</a>.</li>
+            </ol>
+        </article>
+
+        <article id="maintenance">
+            <h2>Maintenance, repairs and replacements</h2>
+            <p>Each <a href="#dfn-owner">Owner</a> shall furnish and be responsible for, at his own expense, all of the maintenance, repairs and replacements within his own <a href="#dfn-unit">Unit</a> and of all windows, doors, screens, air-conditioning unit and all utility lines serving only his own <a href="#dfn-unit">Unit</a>. Each owner shall maintain, at his sole expense, the interior portions of his <a href="#dfn-unit">Unit's</a> attached private patio, including all landscaping planted within these areas. The appearance of the private patios are important to the orderly maintenance, preseration and enjoyment of the <a href="#dfn-common-elements">Common Elements</a> and the health, safety, convenience and welfare of all the <a href="#dfn-owner">Owners</a>. An exception to the private patio maintenance responsibility will be <span class="unit unit-525">Units 525</span> and <span class="unit unit-547">547</span> which have several large mature trees located along their east walls. These trees will be considered part of the <a href="#dfn-common-elements">Common Elements</a> and their maintenance will be paid out of the Common Area Fees.</p>
+
+            <p>Maintenance, repairs and replacements of the <a href="#dfn-common-elements">Common Elements</a> shall be furnished by the <a href="#dfn-association">Association</a> as part of the common expenses, subject to the <a href="#dfn-bylaws">Bylaws</a> and rules and regulations of the <a href="#dfn-association">Association</a>. If, due to the act or neglect of an <a href="#dfn-owner">Owner</a> or his invitee, or guest or other authorized occupant or visitor of such <a href="#dfn-owner">Owner</a>, damage shall be caused to the <a href="#dfn-common-elements">Common Elements</a> or to a <a href="#dfn-unit">Unit</a> or <a href="#dfn-unit">Units</a> owned by others, or maintenance, repairs or replacements shall be required which would otherwise be at the common expense, then such <a href="#dfn-owner">Owner</a> shall pay for such damage and for such maintenance, repairs and replacements as may be determined by the <a href="#dfn-board">Board</a>, to the extent not covered by the <a href="#dfn-association">Association's</a> insurance. An authorized representative of the <a href="#dfn-board">Board</a> or such manager or managing agent, shall be entitled to reasonable access to each of the <a href="#dfn-unit">Units</a> as may be required in connection with maintenance, repairs or replacements of or to the <a href="#dfn-common-elements">Common Elements</a> or any equipment, facilities or fixtures affecting or serving other <a href="#dfn-unit">Units</a> and the <a href="#dfn-common-elements">Common Elements</a>.</p>
+
+            <p>In the event that any <a href="#dfn-owner">Owner</a> shall fail to maintain and repair his <a href="#dfn-unit">Unit</a> and such improvements as required hereunder, the <a href="#dfn-association">Association</a>, in addition to all other remedies available to it hereunder or by law, and without waiving any of said alternative remedies, shall have the right, through its agents and employees, to enter upon said <a href="#dfn-unit">Unit</a> and to repair, maintain, and restore the <a href="#dfn-unit">Unit</a> and the exterior of the building and any other improvements erected therein; and each <a href="#dfn-owner">Owner</a> (by acceptance of a deed for his <a href="#dfn-unit">Unit</a>) hereby covenants and agrees to pay the <a href="#dfn-association">Association</a> the cost thereof immediately upon demand, and the failure of any such <a href="#dfn-owner">Owner</a> to pay the same shall carry with it the same consequences as the failure to pay any assessment hereunder when due.</p>
+        </article>
+
+        <article id="alterations">
+            <h2>Alterations, additions or improvements</h2>
+            <p>No alterations of any <a href="#dfn-common-elements">Common Elements</a> or patios, or any additions or improvements thereto shall be made by any <a href="#dfn-owner">Owner</a> without the prior written approval of the <a href="#dfn-board">Board</a>. Any <a href="#dfn-owner">Owner</a> may make non-structural alterations within his <a href="#dfn-unit">Unit</a>, or any non-structural additions or improvements within such <a href="#dfn-unit">Unit</a>, without the prior written approval of the <a href="#dfn-board">Board</a>, but such <a href="#dfn-owner">Owner</a> shall be responsible for any damage to other <a href="#dfn-unit">Units</a>, the <a href="#dfn-common-elements">Common Elements</a>, or the <a href="#dfn-property">Property</a>, as the result of such alteration, addition or improvement. There shall be no structural alterations or additions to the <a href="#dfn-building">Building</a> without the prior approval of a <a href="#dfn-majority">Majority</a> of the <a href="#dfn-owner">Owners</a> given at a regular or special meeting of the members of the <a href="#dfn-association">Association</a>. Unless otherwise determined at any such meeting, the cost of such alterations or additions shall be paid by means of a special assessment against the <a href="#dfn-owner">Owners</a> in the proportion of their respective undivided percentage interests in the <a href="#dfn-common-elements">Common Elements</a>. Such special assessments share be secured by the lien provided for in <a href="#common-expenses">Paragraph 8</a> of this <a href="#dfn-declaration">Declaration</a>.</p>
+        </article>
+
+        <article id="decoration">
+            <h2>Decoration and architectural control</h2>
+            <ol>
+                <li>Each <a href="#dfn-owner">Owner</a>, at his own expense, shall furnish and be responsible for all of the decorating within his own unit from time to time including painting, wall-papering, washing, cleaning, paneling, floor covering, draperies, window shades, curtains, lamps and other furniture and interior decorating. Each owner shall be entitled to the exclusive use of the interior surfaces of the perimeter walls, floors and ceilings within his <a href="#dfn-unit">Unit</a>, and such <a href="#dfn-owner">Owner</a> shall maintain such surfaces in good condition at his sole expense as may be required from time to time, which said maintenance and use shall be subject to the rules and regulations of the <a href="#dfn-association">Association</a> and each such <a href="#dfn-owner">Owner</a> shall have the right to decorate such surfaces from time to time as he may see fit and at his sole expense. Decorating of the <a href="#dfn-common-elements">Common Elements</a> (other than interior surfaces within the <a href="#dfn-unit">Units</a> as above provided) and by redecorating of <a href="#dfn-unit">Units</a> to the extent made necessary by any damage to existing decorating of such <a href="#dfn-unit">Units</a> caused by maintenance, repair or replacement work on the <a href="#dfn-common-elements">Common Elements</a> by the <a href="#dfn-association">Association</a> shall be furnished by the <a href="#dfn-association">Association</a> as part of the common expenses. The surfaces of all windows and glass doors (if any) forming part of a perimeter wall of a <a href="#dfn-unit">Unit</a> shall be cleaned and/or washed at the expense of such <a href="#dfn-owner">Owner</a>.</li>
+
+                <li>No object which is in the opinion of the <a href="#dfn-board">Board</a> and the <a href="#dfn-majority">Majority</a> of the <a href="#dfn-owner">Owners</a> is unsightly or objectionable shall be placed, hung or permitted on any patio, the <a href="#dfn-common-elements">Common Elements</a>, the exterior of the building or upon or in the windows or outside doors of any <a href="#dfn-unit">Unit</a>. Cleaning of decorated finished interior walls, floors and ceilings of each patio should be the responsibility of the <a href="#dfn-owner">Owner</a> of the <a href="#dfn-unit">Unit</a> to which said patio is a appurtenent. However, painting or decorating of said walls and ceilings must have prior written approval of the <a href="#dfn-association">Association</a>. Maintenance and decorating of the <a href="#dfn-unit">Unit</a> shall be the responsibility of the <a href="#dfn-owner">Owner</a>. Any construction, alteration, replacement or repair of or upon the <a href="#dfn-common-elements">Common Elements</a>, or within a <a href="#dfn-unit">Unit</a> (if of a structural nature) must be approved by the <a href="#dfn-association">Association</a> prior to commencement. The <a href="#dfn-association">Association</a> may require complete plans and specifications and may charge a reasonable fee for professional services connected with reviewing and approving such plans and specifications.</li>
+            </ol>
+        </article>
+
+        <article id="encroachments">
+            <h2>Encroachments</h2>
+            <p>If any portion of the <a href="#dfn-common-elements">Common Elements</a> shall actually encroach upon any <a href="#dfn-unit">Unit</a>, or if any <a href="#dfn-unit">Unit</a> shall actually encroach upon any portions of the <a href="#dfn-common-elements">Common Elements</a>, or if any <a href="#dfn-unit">Unit</a> shall actually encroach upon another <a href="#dfn-unit">Unit</a>, as the <a href="#dfn-common-elements">Common Elements</a> and the <a href="#dfn-unit">Units</a> are shown by the surveys comprising the <a href="#dfn-plat">Plat</a>, there shall be deemed to be mutual easements in favor of the owners of the <a href="#dfn-common-elements">Common Elements</a> and the respective <a href="#dfn-owner">Owners</a> involved to the extent of such encroachment so long as the same shall exist.</p>
+        </article>
+
+        <article id="lease-of-apartment">
+            <h2>Lease of Apartment</h2>
+            <details>
+                <summary>Removed in <a href="#amendment-1987">second amendment: August 14, 1987</a></summary>
+                <div class="deprecated">
+                    <p>If any <a href="#dfn-owner">Owner</a>, other than <a href="#dfn-declarant">Declarant</a>, shall desire at any time to lease his unit, he shall first give the <a href="#dfn-association">Association</a> at least 30 days prior written notice of the proposed lease, which notice shall state the name and address and financial and character references of the proposed lessee and shall contain a copy of the proposed lease. Doing the period of 30 days following the receipt by the <a href="#dfn-association">Association</a> of such a written notice, the <a href="#dfn-association">Association</a> shall have the first right as its option to lease such <a href="#dfn-unit">Unit</a> upon the same terms as the proposed sale or lease described in such notice, or to disapprove such lease.</p>
+
+                    <p>If the <a href="#dfn-association">Association</a> shall give written notice to such <a href="#dfn-owner">Owner</a> within said 30-day period that it has elected not to exercise such option or disapprove such lease, or if the <a href="#dfn-association">Association</a> shall fail to give written notice to such <a href="#dfn-owner">Owner</a> within said 30-day period that it does or does not elect to lease such <a href="#dfn-unit">Unit</a> upon the same terms as herein provided or approve such lease, then such <a href="#dfn-owner">Owner</a> may proceed to close said proposed lease transaction at any time within the next 60 days thereafter; and if he fails to close send proposed lease transaction within said 60 days, his <a href="#dfn-unit">Unit</a> shall again become subject to the <a href="#dfn-association">Association's</a> rights as herein provided.</p>
+
+                    <p>If the <a href="#dfn-association">Association</a> shall give written notice to such <a href="#dfn-owner">Owner</a> within said 30-day period of its election to lease such <a href="#dfn-unit">Unit</a> upon the same terms as the proposed lease described in said written notice to the <a href="#dfn-association">Association</a>, then such lease by the <a href="#dfn-association">Association</a> shall be closed upon the same terms as such proposed lease.</p>
+
+                    <p>If a proposed lease of any <a href="#dfn-unit">Unit</a> is made by any <a href="#dfn-owner">Owner</a> after compliance with the foregoing provisions, a copy of the lease as and when executed shall be furnished by such <a href="#dfn-owner">Owner</a> to the <a href="#dfn-board">Board</a> and the lessee thereunder shall be bound by and be subject to all of the obligations of such <a href="#dfn-owner">Owner</a> with respect to such <a href="#dfn-unit">Unit</a> as provided in this <a href="#dfn-declaration">Declaration</a> and the <a href="#dfn-bylaws">Bylaws</a> and the lease shall not be relieved thereby from any of his obligations. Upon the expiration or termination of such lease or in the event of any attempted subleasing thereunder, the provisions hereof with respect to the <a href="#dfn-association">Association's</a> right of approval or first option shall again apply to such <a href="#dfn-unit">Unit</a>.</p>
+
+                    <p>The provisions herein with respect to the <a href="#dfn-association">Association's</a> right of first option or approval shall not apply to leases made by the <a href="#dfn-declarant">Declarant</a>.</p>
+
+                    <p>If any lease of a <a href="#dfn-unit">Unit</a> is made or attempted by any <a href="#dfn-owner">Owner</a> without complying with the foregoing provisions, such lease shall be subject to each and all of the rights and options of the <a href="#dfn-association">Association</a> hereunder and each and all of the remedies and actions available to the <a href="#dfn-association">Association</a> hereunder.</p>
+
+                    <p>The foregoing provisions with respect to the <a href="#dfn-association">Association's</a> right of first option or approval as to any proposed lease shall be and remain in full force and effect until the <a href="#dfn-property">Property</a> as a whole shall be sold or removed from the provisions of the <a href="#dfn-act">Act</a>, unless sooner rescinded or amended by the <a href="#dfn-owner">Owners</a> in the manner herein provided for amendments of this <a href="#dfn-declaration">Declaration</a>. The <a href="#dfn-board">Board</a> may adopt rules and regulations from time to time not inconsistent with the foregoing provisions for the purpose of implementing and effectuating the foregoing provisions.</p>
+
+                    <p>Anything to the contrary herein not withstanding, the provisions of this <a href="#lease-of-apartment"></a>paragraph 17</a> shall not apply or be enforced by any person with respect to a lease of any <a href="#dfn-unit">Unit</a> and its appurtenant undivided interest in the <a href="#dfn-common-elements">Common Elements</a> to any person by <a href="#dfn-declarant">Declarant</a>, or by an institutional lender which has acquired title through or by virtue of foreclosure by it of a mortgage of record or deed of trust upon such <a href="#dfn-unit">Unit</a> and appurtenant interest of which has acquired title by acceptance of a deed in lieu of the foreclosure of such mortgage or deed of trust.</p>
+
+                    <p>An institutional lender as used herein shall mean a bank, life insurance company, savings and loan association, savings bank, private mortgage company, or other corporation or business trust regularly engaged in making mortgage loans or in purchasing mortgages and/or deeds of trust.</p>
+                </div>
+            </details>
+        </article>
+
+        <article id="restrictions">
+            <h2>Use and occupancy restrictions</h2>
+            <ol>
+                <li>No part of the <a href="#dfn-property">Property</a> shall be used for other than residential or other related purposes except that <a href="#dfn-declarant">Declarant</a> reserves the right to maintain sales offices, model units, and signs, on the <a href="#dfn-property">Property</a>, together with rights of ingress and egress therefrom, until all <a href="#dfn-unit">Units</a> shall have been sold and conveyed by <a href="#dfn-declarant">Declarant</a>. Each <a href="#dfn-unit">Unit</a> or any two or more adjoining <a href="#dfn-unit">Units</a> used together shall be used as permitted by this <a href="#dfn-declaration">Declaration</a> and for no other purpose. That part of the <a href="#dfn-common-elements">Common Elements</a> separating any two or more adjoining <a href="#dfn-unit">Units</a> used together as aforesaid may be altered to afford ingress and egress to and from such adjoining <a href="#dfn-unit">Units</a> provided all expense of making such alterations is paid in full by the <a href="#dfn-owner">Owner</a>.</li>
+
+                <li>Subject to the provisions of these restrictions, use of the <a href="#dfn-common-elements">Common Elements</a> shall bein accordance with and subject to limitations and rules as established and determined by the <a href="#dfn-association">Association</a>.</li>
+
+                <li>Nothing shall be done or kept in any <a href="#dfn-unit">Unit</a> or in any <a href="#dfn-common-elements">Common Element</a> which will increases the rate of insurance thereon without the approval of the <a href="#dfn-association">Association</a>. No <a href="#dfn-owner">Owner</a> shall permit anything to be done or kept in his <a href="#dfn-unit">Unit</a> or in any <a href="#dfn-common-elements">Common Element</a> which will result in the cancellation of insurance thereon or which would be in violation of any law.</li>
+
+                <li>No sign of any kind shall be displayed to the public view or from any <a href="#dfn-unit">Unit</a> or any <a href="#dfn-common-elements">Common Elements</a> without the approval of the <a href="#dfn-association">Association</a>, except such signs as may be used by <a href="#dfn-declarant">Declarant</a> in connection with the development and sale of the <a href="#dfn-property">Property</a>.</li>
+
+                <li>No animals of any kind shall be raised, bred or kept in any <a href="#dfn-unit">Unit</a>, or in any <a href="#dfn-common-elements">Common Elements</a> except that dogs, cats or other household pets may be kept in <a href="#dfn-unit">Units</a>, subject to approval of the <a href="#dfn-association">Association</a>, provided that no animal shall be kept, bred or maintained for any commercial purpose.</li>
+
+                <li>The <a href="#dfn-owner">Owner</a> shall not permit or suffer anything to be done or kept about or within his <a href="#dfn-unit">Unit</a> which will obstruct or interfere with the rights of other occupants, or annoy them by unreasonable noises or otherwise, nor will he commit or permit any nuisance about or within his <a href="#dfn-unit">Unit</a> or commit or suffer any immoral or illegal act to be committed therein. The <a href="#dfn-owner">Owner</a> shall comply with all of the requirements of the health authorities and of all other governmental authorities with respect to the <a href="#dfn-property">Property</a>. If by reason of the occupancy or use of the <a href="#dfn-property">Property</a> by the <a href="#dfn-owner">Owner</a> the rate of insurance on the building shall be increased, the <a href="#dfn-owner">Owner</a> shall be liable for such additional insurance premiums.</li>
+
+                <li>There shall be no structural alteration, construction or removal of any building, fence or other structure in the <a href="#dfn-property">Property</a> without the approval of the <a href="#dfn-association">Association</a> (and <a href="#dfn-declarant">Declarant</a> until such time as all <a href="#dfn-unit">Units</a> have sold).</li>
+
+                <li>No religious, professional, commercial or industrial operations of any kind shall be conducted in or upon any <a href="#dfn-unit">Unit</a> or the <a href="#dfn-common-elements">Common Elements</a> except such temporary uses as shall be permitted by <a href="#dfn-declarant">Declarant</a> while <a href="#dfn-unit">Units</a> are being sold by the <a href="#dfn-declarant">Declarant</a>.</li>
+
+                <li>Except as permitted by the <a href="#dfn-association">Association</a>, no boats, campers or vehicles, other than motorcycles and passenger automobiles, shall be parked or stored in any <a href="#dfn-unit">Unit</a>, or <a href="#dfn-common-elements">Common Elements</a>. No vehicle shall be repaired or rebuilt in any <a href="#dfn-unit">Unit</a>, upon the <a href="#dfn-common-elements">Common Elements</a>.</li>
+
+                <li>All <a href="#dfn-owner">Owners</a> shall be members of the <a href="#dfn-association">Association</a> and shall comply with and be subject to the terms and conditions as set forth in the Articles of Incorporation and <a href="#dfn-bylaws">Bylaws</a> and any rule or regulation of the <a href="#dfn-association">Association</a>. No <a href="#dfn-owner">Owner</a> may transfer any membership or interest in the <a href="#dfn-association">Association</a>, except in connection with the sale of the <a href="#dfn-unit">Unit</a> to which such membership is appurtenant.</li>
+            </ol>
+        </article>
+
+        <article id="remedies">
+            <h2>Remedies</h2>
+            <p>In the event of any default by an <a href="#dfn-owner">Owner</a> under the provisions of the <a href="#dfn-act">Act</a>, this <a href="#dfn-declaration">Declaration</a>, the <a href="#dfn-bylaws">Bylaws</a>, or the rules and regulations of the <a href="#dfn-association">Association</a>, the <a href="#dfn-association">Association</a> or its successors or assigns, or the <a href="#dfn-board">Board</a>, or its agent, or <a href="#dfn-declarant">Declarant</a>, or its assignee, shall have each and all of the rights and remedies which may be provided for in the <a href="#dfn-act">Act</a>, this <a href="#dfn-declaration">Declaration</a>, the<a href="#dfn-bylaws">Bylaws</a> or said rules and regulations, or which may be available by law, and may prosecute any action or other proceedings against such defaulting <a href="#dfn-owner">Owner</a> and others for enforcement or foreclosure of its lien and the appointment of a receiver for the <a href="#dfn-unit">Unit</a> or the solvency of such <a href="#dfn-owner">Owner</a>, for damages or injuction, or specific performance, or for judgment for payment of money and collection thereof, or the right to take possession of the <a href="#dfn-unit">Unit</a> and to rent the <a href="#dfn-unit">Unit</a> and apply the rents received to payment of unpaid assessments and interest accrued thereon, and to sell the same as hereinafter in this paragraph provided, or for any combination of remedies or for any other relief. The proceeds of any such judicial sale shall first be paid to discharge court costs, other litigation costs including but without limitation reasonable attorny's fees, and all other expenses of the proceeding and sale, and all such items shall be taxed against the defaulting owner in a final judgment. Any balance of proceeds after satisfaction of such charges and any unpaid assessments hereunder or any liens shall be paid to the <a href="#dfn-owner">Owner</a>. Upon the confirmation of the sale, the purchasers thereupon shall be entitled to a deed to the <a href="#dfn-unit">Unit</a> and to immediate possession of the <a href="#dfn-unit">Unit</a> and may apply to the court for a writ of restitution for the purpose of acquiring such possession, and it shall be a condition of any such sale, and the judgment shall so provide, that the purchaser shall take the interest in the property sold subject to this <a href="#dfn-declaration">Declaration</a>. All expenses of the <a href="#dfn-association">Association</a> in connection with any such action or proceeding, including court costs and reasonable attorney's fees and other fees and expenses and all damages, liquidated or otherwise, together with interest thereon at the rate of 10 percent per annum until paid, shall be charged to and assessed against such defaulting <a href="#dfn-owner">Owner</a> and shall be added to and deemed part of his respective share of the common expensess and the <a href="#dfn-association">Association</a> shall have a lien for all of the same, as well as for nonpayment of his respective share of the common expenses, upon the <a href="#dfn-unit">Unit</a> of such defaulting <a href="#dfn-owner">Owner</a> and upon all of his additions and improvements thereto. In the event of any such default by any <a href="#dfn-owner">Owner</a>, the <a href="#dfn-association">Association</a> and the <a href="#dfn-board">Board</a> and the manager or manging agent, if so authorized by the <a href="#dfn-board">Board</a>, shall have the authority to correct such default and to do whatever may be necessary for such purpose and all expenses in connection therewith shall be charged to and assessed against such defaulting <a href="#dfn-owner">Owner</a> and such assessment shall constitute a lien against the defaulting <a href="#dfn-owner">Owner's</a> <a href="#dfn-unit">Unit</a>. Any and all such rights and remedies may be exercised at any time and from time to time, cumulatively or otherwise, by the <a href="#dfn-association">Association</a> or the <a href="#dfn-board">Board</a>. The liens provided for in this <a href="#remedies">paragraph 18</a> shall be junior to prior first mortgages and first trust deed, and shall be foreclosed, in the same manner as the lien provided for in <a href="#common-expenses">paragraph 8</a> of this <a href="#dfn-declaration">Declaration</a>.</p>
+
+            <p>If any <a href="#dfn-owner">Owner</a> (either by his conduct or by the conduct of any other <a href="#dfn-occupant">Occupant</a> of his <a href="#dfn-unit">Unit</a>) shall violate any of the provisions of this <a href="#dfn-declaration">Declaration</a> or the <a href="#dfn-bylaws">Bylaws</a> or the rules and regulations, as then in effect; and such violation shall continue for ten days after notice in writing from the <a href="#dfn-board">Board</a> or shall occur repeatedly during any ten-day period after written notice or request to cure such violation from the <a href="#dfn-board">Board</a>, the the <a href="#dfn-board">Board</a>, <a href="#dfn-declarant">Declarant</a>, or its assignee, shall have the power to file an action against the defaulting <a href="#dfn-owner">Owner</a> for a judgment or injunction against the <a href="#dfn-owner">Owner</a> or <a href="#dfn-occupant">Occupant</a> requiring the defaulting <a href="#dfn-owner">Owner</a> to comply with the provisions of this <a href="#dfn-declaration">Declaration</a> or the <a href="#dfn-bylaws">Bylaws</a> or rules and regulations, and granting other appropriate relief including money damages. Anything to the contrary herein notwithstanding any breach of any of the covenants, restrictions, reservations, conditions and servitudes provided for in this <a href="#dfn-declaration">Declaration</a>, or any right of re-entry by reason thereof, shall not default or adversely affect the lien of any mortgage or deed of trust made in good faith and for value upon any <a href="#dfn-unit">Unit</a> and its appurtenant undivided percentage interest in the <a href="#dfn-common-elements">Common Elements</a>, but except as herein specifically provided, each and all of the said covenants, restrictions, reservations, conditions and servitudes shall be binding upon and effective against any lessee or owner of a <a href="#dfn-unit">Unit</a> whose title thereto is acquired by foreclosure, trustee's sale, sale, deed in lieu of foreclosure or otherwise.</p>
+        </article>
+
+        <article id="amendment">
+            <h2>Amendment</h2>
+            <p>The provisions of this <a href="#dfn-declaration">Declaration</a> may be changed, modified or rescinded by an instrument in writing setting forth such changes, modification or rescission, signed by the <a href="#dfn-owner">Owners</a> owning not less than 75 percent of the total ownership of the <a href="#dfn-common-elements">Common Elements</a> then entitled to vote for directors and acknowledged; provided, however, that the holders of all first mortgages, and the beneficiaries under all first trust deeds, of record against one or more of the <a href="#dfn-unit">Units</a> shall have consented in writing to each such change, modification or rescission.</p>
+
+            <p>Notwithstanding the provisions of the foregoing paragraph if the <a href="#dfn-act">Act</a>, this <a href="#dfn-declaration">Declaration</a>, or the <a href="#dfn-bylaws">Bylaws</a> requrie the consent or agreement of all <a href="#dfn-owner">Owners</a> and/or of all lienholders and all trustees and/or beneficiaries under trust deeds, for any action specified in the <a href="#dfn-act">Act</a> or this <a href="#dfn-declaration">Declaration</a>, then any instrument changing, modifying or rescinding any provision of this <a href="#dfn-declaration">Declaration</a> with respect to such action shall be signed by all of the <a href="#dfn-owner">Owners</a> and/or all lienholders and trustees and/or beneficiaries under trust deeds, or both, as required by the <a href="#dfn-act">Act</a> or this <a href="#dfn-declaration">Declaration</a>.</p>
+
+            <p>Anything to the contrary herein notwithstanding, until such time as deeds to all of the <a href="#dfn-unit">Units</a> shall have been delivered by <a href="#dfn-declarant">Declarant</a> to purchasers thereof, <a href="#dfn-declarant">Declarant</a> reserves the right to amend this <a href="#dfn-declaration">Declaration</a>, provided that, with the single exception hereinafter referred to, no such amendment shall have the effect of changing the cubic content space of any <a href="#dfn-unit">Unit</a> (except as minor changes may be necessary in order more accurately to describe the boundaries of the <a href="#dfn-unit">Unit</a>) or in the percentage interest which each <a href="#dfn-unit">Unit</a> bears in the entire horizontal property regime, and provided further that any such amendment shall be consented to in writing by the holders of all first mortgages, and the strustees and beneficiaries under all first trust deeds, then of record with respect to one or more of the <a href="#dfn-unit">Units</a>.</p>
+
+            <p>The change, modification or rescission whether accomplished under any of the provisions of this <a href="#amendment">paragraph 20</a> shall be effective upon recording such instrument, provided, however, that no provisions in this <a href="#dfn-declaration">Declaration</a> may be changed, modified or rescinded os as to conflict with the provisions of the <a href="#dfn-act">Act</a>.</p>
+        </article>
+
+        <article id="notices">
+            <h2>Notices</h2>
+            <p>Notices provided for in this <a href="#dfn-declaration">Declaration</a> or the <a href="#dfn-bylaws">Bylaws</a> shall be in writing and shall be addressed to the <a href="#dfn-association">Association</a> or the <a href="#dfn-board">Board</a>, as the case may be, at an address to be established by the <a href="#dfn-board">Board</a>, or at such other address as herinafter provided. The <a href="#dfn-association">Association</a> or the<a href="#dfn-board">Board</a> may designate a different address or addresses for notices to them respectively by giving written notice of such change of address to all <a href="#dfn-owner">Owners</a> at such time. All notices to owners shall be to their respective <a href="#dfn-unit">Units</a>. Any <a href="#dfn-owner">Owner</a> may also designate a different address or addresses for notices to him by giving written notice of his change of address to the <a href="#dfn-association">Association</a>. Notices addressed as above shall be deemed delivered when mailed by United States registered or certified mai, or when delivered in person with written acknowledgement of the receipt thereof.</p>
+
+            <p>Upon written request to the <a href="#dfn-board">Board</a>, the holder of any recorded mortgage or the trustee or beneficiary under any recorded trust deed, encumbering any <a href="#dfn-unit">Unit</a>, shall be given a copy of all notices permitted or required by this <a href="#dfn-declaration">Declaration</a> to be given to the <a href="#dfn-owner">Owner</a> or <a href="#dfn-owner">Owners</a> of the <a href="#dfn-unit">Unit</a> subject to such mortgage or trust deed.</p>
+        </article>
+
+        <article id="severability">
+            <h2>Severability</h2>
+            <p>If any provision of this <a href="#dfn-declaration">Declaration</a> or the <a href="#dfn-bylaws">Bylaws</a> or the rules and regulations, or any section, clause, sentence, phrase or word, or the application thereof in any circumstances, is held invalid, the validity of the remainder of this <a href="#dfn-declaration">Declaration</a> and <a href="#dfn-bylaws">Bylaws</a>, or the rules and regulations, and of the application of any such provision, section, sentence, clause, phrase or word in any other circumstances, shall not be affected thereby and the remainder of this<a href="#dfn-declaration">Declaration</a> or <a href="#dfn-bylaws">Bylaws</a>, or the rules and regulations, shall be construed as if such invalid part were never included therein.</p>
+        </article>
+
+        <article id="perpetuities">
+            <h2>Perpetuities and restraints on alienation</h2>
+            <p>If any of the options, privileges, covenants or rights created by this <a href="#dfn-declaration">Declaration</a> shall be unlawful, void or voidable for violation of the Rule against perpetuities, the such provision shall continue until 21 years after the death of the survivor of the now living descendants of the United States Senator Dennis Deconcini of Arizona, at which time such provision shall terminate.</p>
+        </article>
+
+        <article id="rights-and-obligations">
+            <h2>Rights and obligations</h2>
+            <p>Each grantee of <a href="#dfn-declarant">Declarant</a>, by the acceptance of a deed of conveyance, or each purchaser under any contract for such deed of conveyance, or each purchaser under any agreement of sale, accepts the same subject to all restrictions, conditions, covenants, reservations, liens and charges, and the jurisdiction, rights and powers created or reserved by this <a href="#dfn-declaration">Declaration</a>, and all rights, benefits and privileges of every character hereby granted, created, reserved or declared, and all impositions and obligations hereby imposed shall be deemed and taken to be convenants running with the land and equitable servitudes, and shall bind any person having at any time any interest or estate in same land, and shall inure to the benefit of such grantee or purchaser in like manner as though the provisions of this <a href="#dfn-declaration">Declaration</a> were recited and stipulated at length in each and every deed of conveyance or purchase contract.</p>
+        </article>
+
+        <section id="amendment-1979">
+            <hgroup>
+                <h3>Amendment to</h3>
+                <h3>Declaration of Horizontal Property Regime</h3>
+                <p>and of</p>
+                <h3>Covenants, conditions, and restrictions</h3>
+            </hgroup>
+
+            <p><strong>Whereas</strong> the original instrument recorded June 7, 1979, in docket 6044 at pages 746 thru 769 without <a href="#exhibit-a">EXHIBIT A</a> and <a href="#exhibit-b">EXHIBIT B</a> attached thereto, as provided therein;</p>
+
+            <p><strong>Whereas</strong> the undersigned, <a href="#dfn-declarant">Declarant</a>, is desirous of fully complying with said instrument;</p>
+
+            <p><strong>Now therefore</strong>, <a href="#dfn-declarant">Declarant</a>, hereby amends said <a href="#dfn-declaration">Declaration</a> to include that parcel of real property, as described on <a href="#exhibit-a">EXHIBIT A</a> attached hereto, as shown on the plat of EL CORONADO CONDOMINUM recorded in book 30 of maps and plats at page 95, shown on <a href="#exhibit-b">EXHIBIT B</a> attached hereto.</p>
+
+            <p><strong>In witness whereof</strong>, PIONEER TRUST COMPANY OF ARIZONA, has caused this Amendement to be duly lexecuted this 11th day of May, 1979.</p>
+        </section>
+
+        <section id="exhibit-a">
+            <h2>Exhibit A</h2>
+            <p>Units 525, 527, 529, 531, 533, 535, 537, 539, 541, 543, 545, and 547 of El Coronado Condominium, Pima County, Arizona, as shown by map on file in book 30 of maps and plats at page 95, Pima County Records.</p>
+        </section>
+
+        <section id="exhibit-b">
+            <h2>Exhibit B</h2>
+            <p>Property plat, as recorded in <cite><a href="https://gis.pima.gov/maps/subdiv/select.cfm?bkpg=30095">Book 30 of Maps in page 95 thereof, Pima County, Arizona</a></cite>.</p>
+            <embed src="./ElCoronadoPlat.pdf" type="application/pdf" />
+        </section>
+
+        <section id="amendment-1987">
+            <hgroup>
+                <h3>Second Amendment to</h3>
+                <h3>Declaration of Horizontal Property Regime</h3>
+                <p>and of</p>
+                <h3>Covenants, conditions, and restrictions</h3>
+                <h4>El Coronado Association</h4>
+            </hgroup>
+
+            <p><strong>Whereas</strong> the original instrument was recorded June 7, 1979, in docket 6044 at pages 746 thru 769 and the first amendment recorded June 12, 1979 in docket 6047 at pages 159 thru 160; and</p>
+
+            <p><strong>Whereas</strong> the undersigned, is desirous of fully complying with said instrument;</p>
+
+            <p><strong>Now therefore</strong>, hereby amends said <a href="#dfn-declaration">Declaration</a> to eliminate <a href="#loans-to-association">paragraph 8.2</a> in its entirety on pages 7 and 8; and to elimiante <a href="#lease-of-apartment">paragraph 17</a> in its entirety on pages 17 and 18 of the original document.</p>
+
+            <p><strong>In witness whereof</strong>, El Coronado Association has caused this Amendment to be duly executed this 14th day of August, 1987.</p>
+        </section>
+    </body>
+</html>
